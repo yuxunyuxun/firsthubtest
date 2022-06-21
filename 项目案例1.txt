@@ -1,0 +1,19 @@
+项目案例
+使用三层架构进行用户的插入操作;
+界面层，业务逻辑层，数据访问层（模拟）
+	spring会接管三层架构中哪些对象的创建？
+	
+	非spring接管下的三层项目构建：
+		实体类：
+			com.yuxun.pojo -- Users
+		数据访问层
+			com.yuxun.dao -- UsersMapper.java(接口)
+						  -- UsersMapperImpl.java(实现类)
+		业务逻辑层
+			com.yuxun.service -- UsersService.java(接口)
+							  -- UsersServiceImpl(实现类)
+		界面层
+			com.yuxun.controller -- UsersController.java
+			
+分层思想：
+	前台调用Controller（接收数据）--> Service（数据处理） --> dao或者mapper负责和数据库交互
